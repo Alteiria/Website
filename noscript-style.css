@@ -1,0 +1,19 @@
+/***********************\
+|* Floating Navigation *|
+\***********************/
+
+nav.sticked {
+    height: 60px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+
+    transition: none;
+}
+
+nav.sticked a {
+    height: 60px;
+    line-height: 60px;
+
+    transition: text-shadow .5s;
+}

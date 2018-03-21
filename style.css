@@ -1,0 +1,818 @@
+/***********************\
+|*       Imports       *|
+\***********************/
+
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+/***********************\
+|*        Fonts        *|
+\***********************/
+
+/* latin-ext */
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url(https://fonts.gstatic.com/s/robotoslab/v7/BngMUXZYTXPIvIBgJJSb6ufD5qWr4xCCQ_k.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Roboto Slab Regular'), local('RobotoSlab-Regular'), url(https://fonts.gstatic.com/s/robotoslab/v7/BngMUXZYTXPIvIBgJJSb6ufN5qWr4xCC.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'), url(https://fonts.gstatic.com/s/robotoslab/v7/BngRUXZYTXPIvIBgJJSb6u92w7CIwR2oefDofMY.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Roboto Slab Bold'), local('RobotoSlab-Bold'), url(https://fonts.gstatic.com/s/robotoslab/v7/BngRUXZYTXPIvIBgJJSb6u92w7CGwR2oefDo.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Vollkorn';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Vollkorn Regular'), local('Vollkorn-Regular'), url(https://fonts.gstatic.com/s/vollkorn/v8/0yb9GDoxxrvAnPhYGxknaE0Urhg0xTY.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Vollkorn';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Vollkorn Regular'), local('Vollkorn-Regular'), url(https://fonts.gstatic.com/s/vollkorn/v8/0yb9GDoxxrvAnPhYGxkpaE0Urhg0.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+    font-family: 'Vollkorn';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Vollkorn Bold'), local('Vollkorn-Bold'), url(https://fonts.gstatic.com/s/vollkorn/v8/0yb6GDoxxrvAnPhYGxGSTVg3jBUe_z_2wDM.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Vollkorn';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Vollkorn Bold'), local('Vollkorn-Bold'), url(https://fonts.gstatic.com/s/vollkorn/v8/0yb6GDoxxrvAnPhYGxGSTVg5jBUe_z_2.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/***********************\
+|*   General Styles    *|
+\***********************/
+
+html {
+    height: 100%;
+    width: 100%;
+
+    background-color: white;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+
+    background-color: #311004;
+}
+
+a:link, a:visited {
+    color: inherit;
+}
+
+hr {
+    display: block;
+    width: 80%;
+    height: 2px;
+    max-width: 250px;
+
+    border: none;
+    border-top: 1px solid #AC600A;
+    border-bottom: 1px solid #AC600A;
+}
+
+/***********************\
+|* Floating Navigation *|
+\***********************/
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+
+    background-color: rgba(0, 0, 0, 0.8);
+    box-shadow: 0 0 10px 0 black;
+
+    text-align: right;
+    color: white;
+
+    transition: height .5s, background-color .5s, box-shadow .5s;
+
+    z-index: 999;
+}
+
+nav.sticked {
+    height: 80px;
+
+    background-color: transparent;
+    box-shadow: 0 0 10px 0 transparent;
+}
+
+nav a {
+    display: inline-block;
+    box-sizing: border-box;
+    height: 60px;
+    padding: 0 10px;
+
+    line-height: 60px;
+    text-align: center;
+    text-decoration: none;
+
+    text-transform: uppercase;
+    font-family: 'Roboto Slab', serif;
+    text-shadow: 2px 0 0 #311004, -2px 0 0 #311004, 0 2px 0 #311004, 0 -2px 0 #311004, 1px 1px #311004, -1px -1px 0 #311004, 1px -1px 0 #311004, -1px 1px 0 #311004;
+
+    transition: text-shadow .5s, height .5s, line-height .5s, font-size .5s;
+}
+
+nav.sticked a {
+    height: 80px;
+    line-height: 80px;
+}
+
+nav a:hover {
+    text-shadow: 2px 0 0 #AC600A, -2px 0 0 #AC600A, 0 2px 0 #AC600A, 0 -2px 0 #AC600A, 1px 1px #AC600A, -1px -1px 0 #AC600A, 1px -1px 0 #AC600A, -1px 1px 0 #AC600A;
+}
+
+nav > a:first-child {
+    float: left;
+    margin-left: 1%;
+}
+
+nav > a:first-child img {
+    max-height: 80%;
+    max-width: 100%;
+    margin: 6px 0;
+
+    vertical-align: top;
+}
+
+nav.sticked > a:first-child img {
+    margin: 0;
+
+    vertical-align: middle;
+}
+
+nav a:last-child {
+    margin-right: 1%;
+}
+
+nav input {
+    display: none;
+}
+
+nav > label {
+    display: none;
+}
+
+/***********************\
+|*       Header        *|
+\***********************/
+
+header {
+    position: relative;
+    height: 100%;
+
+    background-image: url(img/slides/presentation.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+header > div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    display: inline-block;
+    width: 600px;
+    height: 400px;
+    min-width: 30%;
+    max-width: 100%;
+    max-height: 60%;
+    max-height: calc(100% - 160px);
+    /*overflow: hidden;*/
+}
+
+header > div img {
+    display: block;
+    margin: 0 auto 20px auto;
+
+    max-width: 80%;
+    max-height: 80%;
+    max-height: calc(100% - 120px);
+}
+
+header > div h1 {
+    text-align: center;
+    text-transform: uppercase;
+
+    line-height: 80px;
+    font-size: 80px;
+    font-family: 'Roboto Slab', serif;
+
+    color: white;
+
+    margin: 0;
+    height: 100px;
+}
+
+header > div p {
+    text-align: center;
+
+    line-height: 25px;
+    font-size: 24px;
+    font-weight: bold;
+
+    color: white;
+
+    margin: 25px 0;
+
+    font-family: 'Vollkorn', serif;
+}
+
+header a:last-child {
+    position: absolute;
+    bottom: 13px;
+    left: 50%;
+    margin-left: -25px;
+
+    font-size: 40px;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5), inset 0 0 3px 0 rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+header a:last-child i {
+    position: relative;
+    top: 1px;
+
+    transition: top .3s;
+}
+
+header a:last-child:hover i {
+    top: 5px;
+}
+
+/***********************\
+|* Following sections  *|
+\***********************/
+
+body > div {
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    margin: 50px 5% 100px 5%;
+}
+
+body > div h1 {
+    text-align: center;
+    text-transform: uppercase;
+
+    line-height: 100px;
+    font-size: 52px;
+    font-family: 'Roboto Slab', serif;
+
+    color: #311004;
+
+    margin: 0;
+    margin-top: 50px;
+}
+
+body > div h4 {
+    text-align: center;
+
+    line-height: 50px;
+    font-size: 28px;
+    font-family: 'Roboto Slab', serif;
+
+    color: #311004;
+
+    margin: 0;
+    margin-top: -25px;
+}
+
+body > div + div h1 {
+    margin-top: 100px;
+}
+
+body > div p {
+    margin: 50px auto;
+
+    text-align: center;
+    font-family: 'Vollkorn', serif;
+}
+
+body > div p img {
+    max-width: 80px;
+    max-height: 100px;
+
+    margin: 0 10px 20px 10px;
+
+    vertical-align: top;
+}
+
+body > div table {
+    width: 800px;
+    min-width: 80%;
+    max-width: 100%;
+
+    margin: 50px auto;
+
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    text-align: center;
+    font-family: 'Vollkorn', serif;
+}
+
+body > div table tr {
+    display: inline-block;
+    width: 50%;
+}
+
+body > div table td {
+    width: 50%;
+}
+
+body > div table img {
+    max-width: 80%;
+    max-height: 60%;
+    max-height: calc(100% - 150px);
+}
+
+body > div#quotes div {
+    width: 800px;
+    min-width: 80%;
+    max-width: 90%;
+    margin: 25px auto;
+
+    text-align: justify;
+    font-family: 'Vollkorn', serif;
+}
+
+body > div#quotes hr + div {
+    margin-top: 50px;
+}
+
+body > div#quotes div i.huge-quote {
+    display: inline-block;
+    height: 0;
+    line-height: 50px;
+    margin: 0 10px;
+    vertical-align: top;
+
+    color: gray;
+    font-size: 64px;
+    font-style: normal;
+}
+
+body > div#quotes span {
+    display: block;
+    width: 800px;
+    min-width: 80%;
+    max-width: 90%;
+    margin: 25px auto;
+
+    text-align: right;
+    font-family: 'Vollkorn', serif;
+}
+
+/***********************\
+|*   Image sections    *|
+\***********************/
+
+section {
+    position: relative;
+    height: 100%;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+section#slide-map {
+    background-image: url(img/slides/map.jpg);
+}
+
+section#slide-weapon {
+    background-image: url(img/slides/weapon.jpg);
+}
+
+section#slide-banner {
+    background-image: url(img/slides/banner.jpg);
+}
+
+section#slide-3d {
+    background-image: url(img/slides/3d.jpg);
+}
+
+section > div {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    display: inline-block;
+    max-width: 80%;
+    max-height: 60%;
+    /*overflow: hidden;*/
+
+    font-size: 40px;
+    line-height: 42px;
+
+    color: white;
+    font-family: 'Vollkorn', serif;
+    text-shadow: 2px 0 0 rgba(0, 0, 0, 0.3), -2px 0 0 rgba(0, 0, 0, 0.3), 0 2px 0 rgba(0, 0, 0, 0.3), 0 -2px 0 rgba(0, 0, 0, 0.3), 1px 1px rgba(0, 0, 0, 0.3), -1px -1px 0 rgba(0, 0, 0, 0.3), 1px -1px 0 rgba(0, 0, 0, 0.3), -1px 1px 0 rgba(0, 0, 0, 0.3);
+}
+
+section > div p {
+    margin: 0;
+}
+
+/***********************\
+|*       Footer        *|
+\***********************/
+
+footer {
+    padding: 50px 0;
+
+    color: white;
+    text-align: center;
+    font-family: 'Vollkorn', serif;
+
+    background-color: #311004;
+}
+
+/***********************\
+|*     Other stuff     *|
+\***********************/
+
+.badge {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 8px 0 10px;
+    margin: 2px 0;
+
+    font-weight: normal;
+
+    border: 1px solid transparent;
+    border-radius: 10px;
+}
+
+.badge::before {
+    content: "";
+
+    position: relative;
+    top: 1px;
+    left: -5px;
+
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.badge-admin {
+    border-color: #F80E0E;
+    background-color: #F80E0E22;
+}
+
+.badge-manager {
+    border-color: #71368A;
+    background-color: #71368A22;
+}
+
+.badge-builder {
+    border-color: #2ECC71;
+    background-color: #2ECC7122;
+}
+
+.badge-scriptwriter {
+    border-color: #A84300;
+    background-color: #A8430022;
+}
+
+.badge-developer {
+    border-color: #206694;
+    background-color: #20669422;
+}
+
+.badge-sysadmin {
+    border-color: #AD1457;
+    background-color: #AD145722;
+}
+
+.badge-artist {
+    border-color: #11806A;
+    background-color: #11806A22;
+}
+
+.badge-musician {
+    border-color: #F1C40F;
+    background-color: #F1C40F22;
+}
+
+.badge-admin::before {
+    background: #F80E0E;
+}
+.badge-manager::before {
+    background: #71368A;
+}
+
+.badge-builder::before {
+    background: #2ECC71;
+}
+
+.badge-scriptwriter::before {
+    background: #A84300;
+}
+
+.badge-developer::before {
+    background: #206694;
+}
+
+.badge-sysadmin::before {
+    background: #AD1457;
+}
+
+.badge-artist::before {
+    background: #11806A;
+}
+
+.badge-musician::before {
+    background: #F1C40F;
+}
+
+/***********************\
+|*       Mobile        *|
+\***********************/
+
+@media screen and (max-width: 1000px), screen and (max-device-width: 1000px) {
+
+    nav.sticked {
+        height: 60px;
+
+        background-color: rgba(0, 0, 0, 0.5);
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    nav.sticked a {
+        height: 60px;
+        line-height: 60px;
+
+        transition: text-shadow .5s, font-size .5s;
+    }
+
+    nav > a:first-child {
+        max-width: 120px;
+    }
+
+    section {
+        height: 500px;
+        max-height: 50%;
+
+        background-attachment: local;
+    }
+
+}
+
+@media screen and (max-width: 800px), screen and (max-device-width: 800px) {
+
+    nav a {
+        display: block;
+
+        font-size: inherit;
+
+        transition: none;
+    }
+
+    nav.sticked a {
+        font-size: 24px;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        text-shadow: 2px 0 0 #311004, -2px 0 0 #311004, 0 2px 0 #311004, 0 -2px 0 #311004, 1px 1px #311004, -1px -1px 0 #311004, 1px -1px 0 #311004, -1px 1px 0 #311004;
+    }
+
+    nav > a:first-child {
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        float: none;
+
+        z-index: 1;
+    }
+
+    nav a:last-child {
+        margin-right: 0;
+    }
+
+    nav > label {
+        display: initial;
+
+        position: absolute;
+        top: 0;
+        right: 10px;
+
+        margin-right: 1%;
+
+        width: 50px;
+        height: 100%;
+
+        cursor: pointer;
+
+        transition: right .4s, transform .4s;
+    }
+
+    nav > label span, nav > label span::before, nav > label span::after {
+        position: absolute;
+        right: 7.5px;
+        top: 50%;
+        transform: translateY(-2px);
+
+        width: 35px;
+        height: 4px;
+
+        background: white;
+        border-radius: 1.5px;
+        box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.5);
+
+        transition: width 0 .2s, transform .2s, top .2s .2s, box-shadow .2s .2s;
+    }
+
+    nav > label span::before {
+        content: "";
+
+        right: 0;
+        top: -8px;
+    }
+
+    nav > label span::after {
+        content: "";
+
+        right: 0;
+        top: 12px;
+    }
+
+    nav > #menutoggle:checked ~ label span, nav #menutoggle:checked ~ label span::before, nav #menutoggle:checked ~ label span::after {
+        box-shadow: 0 0 3px 0 transparent;
+
+        transition: width 0 .2s, transform .2s .2s, top .2s, box-shadow .2s;
+    }
+
+    nav > #menutoggle:checked ~ label span {
+        width: 0;
+    }
+
+    nav > #menutoggle:checked ~ label span::before {
+        top: 0;
+        transform: rotate(45deg);
+        transform-origin: center;
+    }
+
+    nav > #menutoggle:checked ~ label span::after {
+        top: 0;
+        transform: rotate(-45deg);
+        transform-origin: center;
+    }
+
+    nav > div {
+        position: absolute;
+        right: -100%;
+        top: 0;
+
+        visibility: hidden;
+        width: 100%;
+        height: 100%;
+        height: 100vh;
+
+        box-sizing: content-box;
+        padding-top: 60px;
+
+        background-color: #311004;
+
+        transition: right .4s, visibility 0 .4s;
+    }
+
+    nav > #menutoggle:checked ~ div {
+        visibility: visible;
+        right: 0;
+
+        transition: right .4s;
+    }
+
+    header > div {
+        max-height: 80%;
+        max-height: calc(100% - 60px);
+        top: calc(50% + 30px);
+    }
+
+    header > div h1 {
+        font-size: 60px;
+    }
+
+    header a:last-child {
+        display: none;
+    }
+
+    body > div h1 {
+        line-height: 50px;
+        font-size: 36px;
+
+        margin-bottom: 30px;
+
+        word-wrap: break-word;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        -ms-hyphens: auto;
+        -o-hyphens: auto;
+        hyphens: auto;
+    }
+
+    body > div h4 {
+        line-height: 30px;
+        font-size: 24px;
+
+        margin-bottom: 30px;
+    }
+
+    body > div table {
+        width: 400px;
+    }
+
+    body > div table tr {
+        display: initial;
+        width: unset;
+    }
+
+    body > div table td {
+        width: 50%;
+    }
+
+}
+
+@media screen and (max-width: 400px), screen and (max-device-width: 400px) {
+
+    body > div table {
+        width: 100%;
+    }
+
+    body > div table td {
+        display: block;
+        width: 100%;
+    }
+
+}
