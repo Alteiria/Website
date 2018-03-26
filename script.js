@@ -171,6 +171,7 @@
                 location.pathname = languages[language][0];
         }
 
-        window.location = location;
+        if (window.location.toString() !== location.toString())
+            window.location = location;
     })();
 })();
