@@ -147,24 +147,30 @@
         })();
     };
 
-    // Automatic language redirect
+    // Automatic language/HTTPS redirect
 
     (function() {
-        if (!(!document.referrer && document.location.host === "") && !(!!document.referrer && new URL(document.referrer).origin === document.location.origin)) {
+        var location = new URL(window.location);
+
+        if (location.protocol === "file:") return;
+
+        if (location.host === "alteiria.fr" && location.protocol !== "https:")
+            location.protocol = "https:";
+
+        if (!(!document.referrer && location.host === "") && !(!!document.referrer && new URL(document.referrer).origin === location.origin)) {
             var language = navigator.languages? navigator.languages[0] : (navigator.language || navigator.userLanguage);
             if (language.indexOf('-') !== -1) language = language.split('-')[0];
             if (language.indexOf('_') !== -1) language = language.split('_')[0];
 
             var languages = {
-                "fr": "index.html",
-                "en": "index.en.html",
+                "fr": ["/index.html", "/"],
+                "en": ["/index.en.html"],
             };
 
-            var page = document.location.pathname;
-            page = page.substring(page.lastIndexOf("/") + 1);
-
-            if (language in languages && page !== languages[language])
-                window.location = languages[language];
+            if (language in languages && !!languages[language] && !(location.pathname in languages[language]))
+                location.pathname = languages[language][0];
         }
+
+        window.location = location;
     })();
 })();
