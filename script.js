@@ -152,12 +152,10 @@
     (function() {
         var location = new URL(window.location);
 
-        if (location.protocol === "file:") return;
-
-        if (location.host === "alteiria.fr" && location.protocol !== "https:")
+        if ((location.host === "alteiria.fr" || location.host === "alteiria.gitlab.io") && location.protocol !== "https:")
             location.protocol = "https:";
 
-        if (!(!document.referrer && location.host === "") && !(!!document.referrer && new URL(document.referrer).origin === location.origin)) {
+        if (!(!document.referrer && location.host === "") && !(!!document.referrer && new URL(document.referrer).host === location.host)) {
             var language = navigator.languages? navigator.languages[0] : (navigator.language || navigator.userLanguage);
             if (language.indexOf('-') !== -1) language = language.split('-')[0];
             if (language.indexOf('_') !== -1) language = language.split('_')[0];
@@ -167,8 +165,12 @@
                 "en": ["/index.en.html"],
             };
 
-            if (language in languages && !!languages[language] && !(location.pathname in languages[language]))
-                location.pathname = languages[language][0];
+            if (language in languages && !!languages[language]) {
+            	var page = location.pathname;
+            	page = page.substring(page.lastIndexOf("/"));
+            	if (!(page in languages[language]))
+                	location.pathname = languages[language][0];
+            }
         }
 
         if (window.location.toString() !== location.toString())
