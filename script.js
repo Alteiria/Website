@@ -152,7 +152,7 @@
     (function() {
         var location = new URL(window.location);
 
-        if ((location.host === "alteiria.fr" || location.host === "alteiria.gitlab.io") && location.protocol !== "https:")
+        if ((location.host === "alteiria.fr" || location.host.endsWith(".alteiria.fr") || location.host === "alteiria.gitlab.io") && location.protocol !== "https:")
             location.protocol = "https:";
 
         if (!(!document.referrer && location.host === "") && !(!!document.referrer && new URL(document.referrer).host === location.host)) {
