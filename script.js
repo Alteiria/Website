@@ -147,16 +147,15 @@
         })();
     };
 
-    // Automatic language/HTTPS redirect
+    // Automatic language redirect
 
     (function() {
+        if (!!window.navigator.doNotTrack) return;
+
         var location = new URL(window.location);
 
-        if ((location.host === "alteiria.fr" || location.host.endsWith(".alteiria.fr") || location.host === "alteiria.gitlab.io") && location.protocol !== "https:")
-            location.protocol = "https:";
-
         if (!(!document.referrer && location.host === "") && !(!!document.referrer && new URL(document.referrer).host === location.host)) {
-            var language = navigator.languages? navigator.languages[0] : (navigator.language || navigator.userLanguage);
+            var language = window.navigator.languages? window.navigator.languages[0] : (window.navigator.language || window.navigator.userLanguage);
             if (language.indexOf('-') !== -1) language = language.split('-')[0];
             if (language.indexOf('_') !== -1) language = language.split('_')[0];
 
@@ -165,15 +164,14 @@
                 "en": ["/index.en.html"],
             };
 
-            if (language in languages && !!languages[language]) {
-            	var page = location.pathname;
-            	page = page.substring(page.lastIndexOf("/"));
-            	if (!(page in languages[language]))
-                	location.pathname = languages[language][0];
+            if (languages.hasOwnProperty(language) && !!languages[language]) {
+                var page = location.pathname;
+                page = page.substring(page.lastIndexOf("/"));
+                if (!languages[language].includes(page)) {
+                    location.pathname = languages[language][0];
+                    window.location = location.toString();
+                }
             }
         }
-
-        if (window.location.toString() !== location.toString())
-            window.location = location;
     })();
 })();
