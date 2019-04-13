@@ -27,6 +27,11 @@ functions = "./functions"
     status = 302
 
 [[redirects]]
-    from = "/doc/*"
-    to = "https://doc.alteiria.fr/:splat"
+    from = "/doc/:project/*"
+    to = "https://doc.alteiria.fr/:project/doc/:splat"
+    status = 302
+
+[[redirects]]
+    from = "/doc"
+    to = "https://doc.alteiria.fr"
     status = 302
