@@ -28,10 +28,10 @@ functions = "./functions"
 
 [[redirects]]
     from = "/doc/:project/*"
-    to = "https://doc.alteiria.fr/:project/doc/:splat"
+    to = "https://alteiria.gitlab.io/:project"
     status = 302
 
 [[redirects]]
     from = "/doc"
-    to = "https://doc.alteiria.fr"
+    to = "https://alteiria.gitlab.io"
     status = 302
