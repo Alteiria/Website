@@ -1,152 +1,185 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
-        <!-- <link rel="canonical" href="https://alteiria.fr/index.html" /> -->
-        <link rel="stylesheet" href="style.css" />
-        <title>Alteiria</title>
-        <script type="text/javascript">
-        var _paq = _paq || [];
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+    <!-- <link rel="canonical" href="https://alteiria.fr/index.html" /> -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Alteiria</title>
+    <script type="text/javascript">
+        var _paq = window._paq || [];
         _paq.push(['trackPageView']);
         _paq.push(['enableLinkTracking']);
         _paq.push(['enableHeartBeatTimer']);
-        (function() {
-        var u="//analyses.alteiria.fr/";
-        _paq.push(['setTrackerUrl', u]);
-        _paq.push(['setSiteId', '6']);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u; s.parentNode.insertBefore(g,s);
+        (function () {
+            var u = "/science/";
+            _paq.push(['setTrackerUrl', u + 'php']);
+            _paq.push(['setSiteId', '6']);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'js'; s.parentNode.insertBefore(g, s);
         })();
-        </script>
-        <noscript><p><img src="//analyses.alteiria.fr/?idsite=6&rec=1" style="border:0;" alt="" /></p></noscript>
-    </head>
-    <body>
-        <nav class="sticked">
-            <a href="#"><img src="img/text.png" alt="Alteiria" /></a>
-            <input type="checkbox" id="menutoggle" />
-            <div>
-                <a href="#overview">Présentation</a>
-                <a href="#gameplay">Gameplay</a>
-                <a href="#story">Histoire</a>
-                <a href="#3d">3D</a>
-                <a href="#contact">Contact</a>
-                <a href="index.en.html">EN</a>
-            </div>
-            <label for="menutoggle"><span></span></label>
-        </nav>
+    </script>
+    <noscript>
+        <p><img src="/science/php?idsite=6&rec=1" style="border:0;" alt="" /></p>
+    </noscript>
+</head>
 
-        <header id="header">
-            <div>
-                <img src="img/text.png" data-src0="img/text-pop.gif" data-src1="img/text-stay.gif" alt="Alteiria" id="alteiria-text-gif" />
-                <!-- <h1>Alteiria</h1> -->
-                <hr/>
-                <p>
-                    Serveur MMORPG sans launcher repoussant les limites de Minecraft pour vous proposer un contenu novateur et envoûtant.
-                </p>
-            </div>
-            <a href="#overview"><i class="fa fa-angle-down"></i></a>
-        </header>
+<body>
+    <nav class="sticked">
+        <a href="#"><img src="img/text.png" alt="Alteiria" /></a>
+        <input type="checkbox" id="menutoggle" />
+        <div>
+            <a href="#overview">Présentation</a>
+            <a href="#gameplay">Gameplay</a>
+            <a href="#story">Histoire</a>
+            <a href="#3d">3D</a>
+            <a href="#contact">Contact</a>
+            <a href="index.en.html">EN</a>
+        </div>
+        <label for="menutoggle"><span></span></label>
+    </nav>
 
-        <div id="overview">
-            <h1>Une épopée visuelle</h1>
-            <!-- <h4>Sous-titre</h4> -->
-            <hr/>
+    <header id="header">
+        <div>
+            <img src="img/text.png" data-src0="img/text-pop.gif" data-src1="img/text-stay.gif" alt="Alteiria"
+                id="alteiria-text-gif" />
+            <!-- <h1>Alteiria</h1> -->
+            <hr />
             <p>
-                Cette terre dépendante de vos décisions est divisée en <b>dix&nbsp;régions</b>, chacune différente des autres, avec ses peuples, sa géographie, ses lieux d’intérêt, ses légendes, son histoire…<br/>
-                L’expérience de jeu est <b>unique</b> à chaque instant, toujours diversifiée, afin de ne jamais lasser le joueur&nbsp;: tout au long de votre aventure, vous pourrez profiter de <b>mini-jeux</b> pour découvrir la région (Elytra, course de monture…) et de belles <b>cinématiques</b>.
+                Serveur MMORPG sans launcher repoussant les limites de Minecraft pour vous proposer un contenu novateur
+                et envoûtant.
             </p>
         </div>
+        <a href="#overview"><i class="fa fa-angle-down"></i></a>
+    </header>
 
-        <section id="slide-map">
-            <div>
-                <!-- <p>
+    <div id="overview">
+        <h1>Une épopée visuelle</h1>
+        <!-- <h4>Sous-titre</h4> -->
+        <hr />
+        <p>
+            Cette terre dépendante de vos décisions est divisée en <b>dix&nbsp;régions</b>, chacune différente des
+            autres, avec ses peuples, sa géographie, ses lieux d’intérêt, ses légendes, son histoire…<br />
+            L’expérience de jeu est <b>unique</b> à chaque instant, toujours diversifiée, afin de ne jamais lasser le
+            joueur&nbsp;: tout au long de votre aventure, vous pourrez profiter de <b>mini-jeux</b> pour découvrir la
+            région (Elytra, course de monture…) et de belles <b>cinématiques</b>.
+        </p>
+    </div>
+
+    <section id="slide-map">
+        <div>
+            <!-- <p>
                     TODO
                 </p> -->
-            </div>
-        </section>
-
-        <div id="gameplay">
-            <h1>Un gameplay immersif et atypique</h1>
-            <!-- <h4>Sous-titre</h4> -->
-            <hr/>
-            <p>
-                Alteiria permet une grande <b>souplesse</b> quant au rôle et aux caractéristiques de votre personnage. Vous serez propulsé dans une <b>dynamique</b> qui se fait rare même dans les jeux actuels. Pas de classe, pas de race, mais des armes au coeur du gameplay. Chaque arme vous apporte, en plus de ses caractéristiques, trois <b>sorts</b> qui lui sont propres pouvant varier d’une arme à l’autre, même si elles sont du même type. Vous serez face à vos décisions, permettant de vous constituer le <b>profil</b> qui vous correspond, mais également de le changer facilement.
-            </p>
         </div>
+    </section>
 
-        <section id="slide-weapon">
-            <div>
-                <!-- <p>
+    <div id="gameplay">
+        <h1>Un gameplay immersif et atypique</h1>
+        <!-- <h4>Sous-titre</h4> -->
+        <hr />
+        <p>
+            Alteiria permet une grande <b>souplesse</b> quant au rôle et aux caractéristiques de votre personnage. Vous
+            serez propulsé dans une <b>dynamique</b> qui se fait rare même dans les jeux actuels. Pas de classe, pas de
+            race, mais des armes au coeur du gameplay. Chaque arme vous apporte, en plus de ses caractéristiques, trois
+            <b>sorts</b> qui lui sont propres pouvant varier d’une arme à l’autre, même si elles sont du même type. Vous
+            serez face à vos décisions, permettant de vous constituer le <b>profil</b> qui vous correspond, mais
+            également de le changer facilement.
+        </p>
+    </div>
+
+    <section id="slide-weapon">
+        <div>
+            <!-- <p>
                     TODO
                 </p> -->
-            </div>
-        </section>
-
-        <div id="story">
-            <h1>Une histoire dynamique et palpitante</h1>
-            <!-- <h4>Sous-titre</h4> -->
-            <hr/>
-            <p>
-                Au commencement était l’<b>Ennéalabe</b>, la “<b>Divine&nbsp;Machinerie</b>”, titanesque dispositif constitué de neuf gigantesques rouages. Créatrice et détentrice absolue du temps, elle généra les splendeurs naturelles d’Alteiria puis y insuffla la vie.<br/>
-                Depuis cette époque, une <b>Terrible&nbsp;Prophétie</b> plane sur Alteiria : “L’<b>Ennéalabe</b> tournera durant neuf cycles de quatre-vingt-dix-neuf années chacun, puis s’arrêtera définitivement, entraînant ainsi la fin des temps”.<br/>
-                La fin du dernier cycle approche. Vous êtes né avec le symbole de l’<b>Ennéalabe</b> tatoué sur votre cœur.<br/>
-                Quelle est votre place au sein de cette terrible prophétie ?<br/>
-                Quels seront vos choix&nbsp;?<br/>
-                <i>Pour l’avenir d’Alteiria…</i><br/>
-                <br/>
-                Pour vous accompagner dans votre périple, nous vous proposons notre <b>bande-son originale</b>, composée pour Alteiria :<br/>
-                <br/>
-                <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/381495290&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
-                <!-- SoundCloud widget code -->
-            </p>
         </div>
+    </section>
 
-        <section id="slide-banner">
-            <div>
-                <!-- <p>
+    <div id="story">
+        <h1>Une histoire dynamique et palpitante</h1>
+        <!-- <h4>Sous-titre</h4> -->
+        <hr />
+        <p>
+            Au commencement était l’<b>Ennéalabe</b>, la “<b>Divine&nbsp;Machinerie</b>”, titanesque dispositif
+            constitué de neuf gigantesques rouages. Créatrice et détentrice absolue du temps, elle généra les splendeurs
+            naturelles d’Alteiria puis y insuffla la vie.<br />
+            Depuis cette époque, une <b>Terrible&nbsp;Prophétie</b> plane sur Alteiria : “L’<b>Ennéalabe</b> tournera
+            durant neuf cycles de quatre-vingt-dix-neuf années chacun, puis s’arrêtera définitivement, entraînant ainsi
+            la fin des temps”.<br />
+            La fin du dernier cycle approche. Vous êtes né avec le symbole de l’<b>Ennéalabe</b> tatoué sur votre
+            cœur.<br />
+            Quelle est votre place au sein de cette terrible prophétie ?<br />
+            Quels seront vos choix&nbsp;?<br />
+            <i>Pour l’avenir d’Alteiria…</i><br />
+            <br />
+            Pour vous accompagner dans votre périple, nous vous proposons notre <b>bande-son originale</b>, composée
+            pour Alteiria :<br />
+            <br />
+            <iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay"
+                src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/381495290&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=true&show_reposts=false&show_teaser=false"></iframe>
+            <!-- SoundCloud widget code -->
+        </p>
+    </div>
+
+    <section id="slide-banner">
+        <div>
+            <!-- <p>
                     TODO
                 </p> -->
-            </div>
-        </section>
-
-        <div id="3d">
-            <h1>Une aventure en 3D</h1>
-            <!-- <h4>Sous-titre</h4> -->
-            <hr/>
-            <p>
-                Alteiria propose une aventure agrémentée d’<b>items&nbsp;en&nbsp;3D</b>. De l’arbalète au sceptre en passant par le marteau, le joueur dispose d’un <b>large&nbsp;panel</b> d’armes entièrement réalisées en 3D. De quoi rendre les combats visuellement plus <b>animés</b>. Nos constructeurs utilisent aussi la modélisation 3D pour <b>enjoliver</b> votre épopée.
-            </p>
         </div>
+    </section>
 
-        <section id="slide-3d">
-            <div>
-                <!-- <p>
+    <div id="3d">
+        <h1>Une aventure en 3D</h1>
+        <!-- <h4>Sous-titre</h4> -->
+        <hr />
+        <p>
+            Alteiria propose une aventure agrémentée d’<b>items&nbsp;en&nbsp;3D</b>. De l’arbalète au sceptre en passant
+            par le marteau, le joueur dispose d’un <b>large&nbsp;panel</b> d’armes entièrement réalisées en 3D. De quoi
+            rendre les combats visuellement plus <b>animés</b>. Nos constructeurs utilisent aussi la modélisation 3D
+            pour <b>enjoliver</b> votre épopée.
+        </p>
+    </div>
+
+    <section id="slide-3d">
+        <div>
+            <!-- <p>
                     TODO
                 </p> -->
-            </div>
-        </section>
-
-        <div id="contact">
-            <h1>Contact</h1>
-            <h4>Questions&nbsp;? Suggestions&nbsp;? Nous sommes là pour vous</h4>
-            <hr/>
-            <p>
-                Alteiria est encore un serveur <b>en&nbsp;développement</b>. Et pour le mener à son terme, <b>nous avons besoin de vous</b>. Que vous soyez un expert en construction, un développeur chevronné, un musicien attentif, un graphiste soigneux et avant tout un passionné, vos compétences sont les bienvenues pour mener à bien cet <b>ambitieux&nbsp;projet</b> et fédérer une communauté autour d’un <b>serveur&nbsp;novateur</b>.<br/>
-                <br/>
-                <b>Pour&nbsp;postuler</b>, il suffit de remplir <a href="https://goo.gl/forms/MSVczguQJkso05T83" target="_blank">ce&nbsp;formulaire</a> et nous vous répondrons dans les plus brefs délais.<br/>
-                <br/>
-                Sachez également que nous sommes très présents sur les <b>réseaux&nbsp;sociaux</b>, et que la meilleure manière de nous soutenir pour le moment, c’est d’<b>aimer et de partager</b>&nbsp;!<br/>
-                <br/>
-                <a href="https://twitter.com/AlteiriaMC" target="_blank"><img src="img/brands/twitter.png" alt="Twitter" /></a>
-                <a href="https://facebook.com/alteiria" target="_blank"><img src="img/brands/facebook.png" alt="Facebook" /></a>
-                <a href="https://discord.gg/ejSnEDk" target="_blank"><img src="img/brands/discord.png" alt="Discord" /></a>
-                <a href="https://minecraft.fr/forum/threads/202966" target="_blank"><img src="img/brands/minecraft.png" alt="Minecraft.fr" /></a>
-            </p>
         </div>
+    </section>
 
-        <!-- <div id="team">
+    <div id="contact">
+        <h1>Contact</h1>
+        <h4>Questions&nbsp;? Suggestions&nbsp;? Nous sommes là pour vous</h4>
+        <hr />
+        <p>
+            Alteiria est encore un serveur <b>en&nbsp;développement</b>. Et pour le mener à son terme, <b>nous avons
+                besoin de vous</b>. Que vous soyez un expert en construction, un développeur chevronné, un musicien
+            attentif, un graphiste soigneux et avant tout un passionné, vos compétences sont les bienvenues pour mener à
+            bien cet <b>ambitieux&nbsp;projet</b> et fédérer une communauté autour d’un
+            <b>serveur&nbsp;novateur</b>.<br />
+            <br />
+            <b>Pour&nbsp;postuler</b>, il suffit de remplir <a href="https://goo.gl/forms/MSVczguQJkso05T83"
+                target="_blank">ce&nbsp;formulaire</a> et nous vous répondrons dans les plus brefs délais.<br />
+            <br />
+            Sachez également que nous sommes très présents sur les <b>réseaux&nbsp;sociaux</b>, et que la meilleure
+            manière de nous soutenir pour le moment, c’est d’<b>aimer et de partager</b>&nbsp;!<br />
+            <br />
+            <a href="https://twitter.com/AlteiriaMC" target="_blank"><img src="img/brands/twitter.png"
+                    alt="Twitter" /></a>
+            <a href="https://facebook.com/alteiria" target="_blank"><img src="img/brands/facebook.png"
+                    alt="Facebook" /></a>
+            <a href="https://discord.gg/ejSnEDk" target="_blank"><img src="img/brands/discord.png" alt="Discord" /></a>
+            <a href="https://minecraft.fr/forum/threads/202966" target="_blank"><img src="img/brands/minecraft.png"
+                    alt="Minecraft.fr" /></a>
+        </p>
+    </div>
+
+    <!-- <div id="team">
             <h1>L’équipe</h1>
             <h4>Les meilleurs dans tous les domaines, rassemblés pour vous</h4>
             <hr/>
@@ -238,7 +271,7 @@
             </table>
         </div> -->
 
-        <!-- <div id="quotes">
+    <!-- <div id="quotes">
             <h1>Citations</h1>
             <h4>Les plus grands nous recommandent, en voici la preuve</h4>
             <hr/>
@@ -279,21 +312,23 @@
             <br/>
         </div> -->
 
-        <footer>
-            Copyright &copy; Alteiria 2018. Tous droits réservés. – “Minecraft” est une marque déposée par Mojang AB.<br/>
-            Alteiria n’est en aucun cas affilié à Mojang AB, ni ne devrait être considéré comme une société endossée par Mojang AB.<br/>
-            <br/>
-            <a href="https://twitter.com/AlteiriaMC" target="_blank">Twitter</a> –
-            <a href="https://facebook.com/alteiria" target="_blank">Facebook</a> –
-            <a href="https://discord.gg/ejSnEDk" target="_blank">Discord</a> –
-            <a href="https://minecraft.fr/forum/threads/202966" target="_blank">Minecraft.fr</a> –
-            <a href="index.en.html">English</a>
-        </footer>
+    <footer>
+        Copyright &copy; Alteiria 2018. Tous droits réservés. – “Minecraft” est une marque déposée par Mojang AB.<br />
+        Alteiria n’est en aucun cas affilié à Mojang AB, ni ne devrait être considéré comme une société endossée par
+        Mojang AB.<br />
+        <br />
+        <a href="https://twitter.com/AlteiriaMC" target="_blank">Twitter</a> –
+        <a href="https://facebook.com/alteiria" target="_blank">Facebook</a> –
+        <a href="https://discord.gg/ejSnEDk" target="_blank">Discord</a> –
+        <a href="https://minecraft.fr/forum/threads/202966" target="_blank">Minecraft.fr</a> –
+        <a href="index.en.html">English</a>
+    </footer>
 
-        <script src="lib/zenscroll.min.js"></script>
-        <script src="script.js"></script>
-        <noscript>
-            <link rel="stylesheet" href="noscript-style.css">
-        </noscript>
-    </body>
+    <script src="lib/zenscroll.min.js"></script>
+    <script src="script.js"></script>
+    <noscript>
+        <link rel="stylesheet" href="noscript-style.css">
+    </noscript>
+</body>
+
 </html>
