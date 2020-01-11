@@ -8,19 +8,21 @@
         <link rel="stylesheet" href="style.css" />
         <title>Alteiria</title>
         <script type="text/javascript">
-        var _paq = _paq || [];
-        _paq.push(['trackPageView']);
-        _paq.push(['enableLinkTracking']);
-        _paq.push(['enableHeartBeatTimer']);
-        (function() {
-        var u="//analyses.alteiria.fr/";
-        _paq.push(['setTrackerUrl', u]);
-        _paq.push(['setSiteId', '6']);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u; s.parentNode.insertBefore(g,s);
-        })();
+            var _paq = window._paq || [];
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            _paq.push(['enableHeartBeatTimer']);
+            (function () {
+                var u = "/science/";
+                _paq.push(['setTrackerUrl', u + 'php']);
+                _paq.push(['setSiteId', '6']);
+                var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+                g.type = 'text/javascript'; g.async = true; g.defer = true; g.src = u + 'js'; s.parentNode.insertBefore(g, s);
+            })();
         </script>
-        <noscript><p><img src="//analyses.alteiria.fr/?idsite=6&rec=1" style="border:0;" alt="" /></p></noscript>
+        <noscript>
+            <p><img src="/science/php?idsite=6&rec=1" style="border:0;" alt="" /></p>
+        </noscript>
     </head>
     <body>
         <nav class="sticked">
