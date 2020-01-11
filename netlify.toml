@@ -1,5 +1,6 @@
 [build]
 functions = "./functions"
+command = "cd functions/ && npm i"
 
 [[redirects]]
     from = "/discord"
