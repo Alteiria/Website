@@ -3,6 +3,12 @@ functions = "./functions"
 command = "cd functions/ && npm i"
 
 [[redirects]]
+    from = "/science/*"
+    to = "https://stats.unixfox.eu/analyses/:splat"
+    status = 200
+    force = true
+
+[[redirects]]
     from = "/discord"
     to = "https://discord.gg/ejSnEDk"
     status = 302

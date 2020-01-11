@@ -6,13 +6,13 @@ const app = express();
 
 const baseURL = "https://stats.unixfox.eu";
 
-app.use('/js', proxy(baseURL, {
+app.use('/science/js', proxy(baseURL, {
     proxyReqPathResolver: function (req) {
         return '/matomo.js';
     }
 }));
 
-app.use('/php', proxy(baseURL, {
+app.use('/science/php', proxy(baseURL, {
     proxyReqPathResolver: function (req) {
         return '/matomo.php';
     }
